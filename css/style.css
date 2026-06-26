@@ -1,0 +1,701 @@
+```css
+/* ==========================================================================
+   KAIROS SEARCH
+   Main Stylesheet
+   File: css/style.css
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+
+:root {
+
+    --color-primary: #F26522;
+    --color-primary-dark: #D95315;
+
+    --color-charcoal: #222222;
+    --color-grey: #666666;
+    --color-light-grey: #F5F5F5;
+    --color-border: #E5E5E5;
+    --color-white: #FFFFFF;
+
+    --font-family: "Inter", sans-serif;
+
+    --container-width: 1200px;
+    --container-padding: 1.5rem;
+
+    --header-height: 80px;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 4px 18px rgba(0,0,0,.06);
+    --shadow-md: 0 10px 35px rgba(0,0,0,.08);
+
+    --transition: .3s ease;
+
+}
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    font-size:16px;
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    color:var(--color-charcoal);
+
+    background:var(--color-white);
+
+    line-height:1.7;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    font:inherit;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+section{
+    scroll-margin-top:100px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4{
+
+    font-weight:700;
+    line-height:1.15;
+    color:var(--color-charcoal);
+
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:1.25rem;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:1rem;
+}
+
+h3{
+    font-size:1.25rem;
+    margin-bottom:.75rem;
+}
+
+p{
+
+    margin-bottom:1.25rem;
+
+    color:var(--color-grey);
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:3rem;
+
+}
+
+.eyebrow{
+
+    color:var(--color-primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    font-weight:600;
+
+    margin-bottom:1rem;
+
+    font-size:.9rem;
+
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.container{
+
+    width:min(100% - 3rem,var(--container-width));
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    padding:5rem 0;
+
+}
+
+.section-alt{
+
+    background:var(--color-light-grey);
+
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.navbar{
+
+    min-height:var(--header-height);
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.navbar .container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:180px;
+
+}
+
+.nav-toggle{
+
+    display:block;
+
+    font-size:1.7rem;
+
+    color:var(--color-charcoal);
+
+}
+
+.nav-menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--color-white);
+
+    border-top:1px solid var(--color-border);
+
+}
+
+.nav-menu.active{
+
+    display:block;
+
+}
+
+.nav-menu li{
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.nav-menu a{
+
+    display:block;
+
+    padding:1rem 1.5rem;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-menu a:hover{
+
+    color:var(--color-primary);
+
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.90),
+    rgba(255,255,255,.90));
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    padding:5rem 0;
+
+}
+
+.hero h1{
+
+    font-size:clamp(2.5rem,6vw,4.4rem);
+
+}
+
+.hero-text{
+
+    font-size:1.15rem;
+
+    margin-bottom:2rem;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:54px;
+
+    padding:0 2rem;
+
+    border-radius:var(--radius-sm);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.button-primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+.button-primary:hover{
+
+    background:var(--color-primary-dark);
+
+}
+
+.button-secondary{
+
+    border:2px solid var(--color-primary);
+
+    color:var(--color-primary);
+
+}
+
+.button-secondary:hover{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+.grid{
+
+    display:grid;
+
+    gap:1.5rem;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:2rem;
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    border:1px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ==========================================================================
+   EXPERTISE GRID
+   ========================================================================== */
+
+#expertise .grid{
+
+    grid-template-columns:1fr;
+
+}
+
+#expertise .card{
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================================
+   INDUSTRY GRID
+   ========================================================================== */
+
+#industries .grid{
+
+    display:grid;
+
+    gap:1.5rem;
+
+}
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+.contact-list{
+
+    display:grid;
+
+    gap:2rem;
+
+    margin-top:2rem;
+
+}
+
+.contact-list li{
+
+    padding:2rem;
+
+    background:white;
+
+    border-radius:var(--radius-md);
+
+    border:1px solid var(--color-border);
+
+}
+
+.contact-list a{
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+}
+
+.contact-list a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================================
+   CONTACT CTA
+   ========================================================================== */
+
+.contact-cta{
+
+    text-align:center;
+
+    background:var(--color-primary);
+
+    color:white;
+
+    padding:4rem 2rem;
+
+    border-radius:var(--radius-lg);
+
+}
+
+.contact-cta h2,
+.contact-cta p{
+
+    color:white;
+
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer{
+
+    background:var(--color-charcoal);
+
+    color:white;
+
+    text-align:center;
+
+    padding:3rem 0;
+
+}
+
+.site-footer p{
+
+    color:rgba(255,255,255,.8);
+
+    margin-bottom:.75rem;
+
+}
+
+.site-footer img{
+
+    margin:0 auto 1.5rem;
+
+}
+
+/* ==========================================================================
+   BACK TO TOP
+   ========================================================================== */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:1.5rem;
+
+    bottom:1.5rem;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:white;
+
+    box-shadow:var(--shadow-md);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width:768px){
+
+    .hero-actions{
+
+        flex-direction:row;
+
+    }
+
+    .grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    #expertise .grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .contact-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width:1024px){
+
+    .nav-toggle{
+
+        display:none;
+
+    }
+
+    .nav-menu{
+
+        position:static;
+
+        display:flex;
+
+        width:auto;
+
+        border:none;
+
+        gap:2rem;
+
+    }
+
+    .nav-menu li{
+
+        border:none;
+
+    }
+
+    .nav-menu a{
+
+        padding:0;
+
+    }
+
+    .hero{
+
+        min-height:90vh;
+
+    }
+
+    .grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    #expertise .grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    #industries .grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+```
