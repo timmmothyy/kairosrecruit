@@ -1,0 +1,10 @@
+```text id="1sr0go"
+# robots.txt
+# Kairos Search
+# https://www.kairosrecruit.com/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kairosrecruit.com/sitemap.xml
+```
