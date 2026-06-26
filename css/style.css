@@ -10,32 +10,31 @@
    ========================================================================== */
 
 :root {
-
-    --color-primary: #F26522;
-    --color-primary-dark: #D95315;
-
-    --color-charcoal: #222222;
-    --color-grey: #666666;
-    --color-light-grey: #F5F5F5;
-    --color-border: #E5E5E5;
-    --color-white: #FFFFFF;
+    /* Brand Colors extracted from your official logos */
+    --color-primary: #e65c00;         /* The vibrant orange from your logos */
+    --color-primary-dark: #c44e00;    /* Deep orange for hover states */
+    --color-accent: #e65c00;          /* Signature accent highlight */
+    --color-accent-hover: #c44e00;
+    
+    /* Neutral typography tones based on the "Search" text in Kairos_logo_Set b-01.jpg */
+    --color-charcoal: #2b2b2b;        /* Deep professional gray for strong headings */
+    --color-grey: #5c5c5c;            /* Balanced mid-gray for body copy text */
+    --color-light-grey: #f9fafb;      /* Clean background tint to break up white space */
+    --color-border: #e5e7eb;
+    --color-white: #ffffff;
 
     --font-family: "Inter", sans-serif;
-
     --container-width: 1200px;
-    --container-padding: 1.5rem;
-
     --header-height: 80px;
 
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 18px;
+    --radius-sm: 4px;                 /* Sleek clean borders */
+    --radius-md: 6px;
+    --radius-lg: 12px;
 
-    --shadow-sm: 0 4px 18px rgba(0,0,0,.06);
-    --shadow-md: 0 10px 35px rgba(0,0,0,.08);
-
-    --transition: .3s ease;
-
+    /* Drop shadows updated to cast a soft neutral tone rather than navy */
+    --shadow-sm: 0 4px 20px rgba(43, 43, 43, 0.04);
+    --shadow-md: 0 12px 30px rgba(43, 43, 43, 0.08);
+    --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* ==========================================================================
