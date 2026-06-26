@@ -897,4 +897,23 @@ p{
     }
 
 }
+
+/* ==========================================================================
+   ACCESSIBILITY VISUAL MANAGEMENT (Hide Skip Link)
+   ========================================================================== */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    z-index: 9999;
+    transition: top 0.2s ease;
+}
+
+/* Safely pops into view ONLY if someone navigates your site using the Tab key */
+.skip-link:focus {
+    top: 0;
+}
 ```
