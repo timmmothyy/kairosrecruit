@@ -135,7 +135,7 @@ p {
 }
 
 /* ==========================================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION (Merged & Spacing Corrected)
    ========================================================================== */
 .site-header {
     position: sticky;
@@ -152,8 +152,10 @@ p {
     align-items: center;
 }
 
+/* FIXED: Changed width from 100% to match your site-wide layout containers, pulling the contact button safely away from the screen edge */
 .navbar .container {
-    width: 100%;
+    width: min(100% - 3rem, var(--container-width));
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,6 +163,8 @@ p {
 
 .logo img {
     width: 180px;
+    height: auto;
+    display: block;
 }
 
 .nav-toggle {
